@@ -12,6 +12,12 @@ class Metronome extends Component {
       beatsPerMeasure: 4,
     };
   }
+
+  handleBpmChange = (e) => {
+    const bpm = e.target.value;
+    this.setState({ bpm });
+  };
+
   render() {
     const { playing, bpm } = this.state;
     return (
